@@ -176,7 +176,7 @@ USER nginx
 RUN whoami
 
 # Add NGINX path, config and static files.
-ENV PATH "${PATH}:/var/local/nginx/sbin"
+ENV PATH "${PATH}:/var/cache/nginx/sbin"
 ADD nginx.conf /var/cache/nginx/conf/nginx.conf.template
 #RUN mkdir -p /var/cache/data && mkdir /www
 ADD static /www/static
